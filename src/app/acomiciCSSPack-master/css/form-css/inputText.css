@@ -1,0 +1,323 @@
+.form-text{
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid gray;
+    outline: none;
+    background:  transparent;
+    -webkit-transition: background-color 0.4s, border-bottom-color 0.4s;
+    -moz-transition: background-color 0.4s, border-bottom-color 0.4s;
+    -ms-transition: background-color 0.4s, border-bottom-color 0.4s;
+    -o-transition: background-color 0.4s, border-bottom-color 0.4s;
+    transition: background-color 0.4s, border-bottom-color 0.4s;
+}
+
+.form-text:hover{
+    border-bottom: 2px solid #6c87ff;
+    background: #fafafa;
+}
+
+.form-text:focus{
+    border-bottom: 2px solid #464aff;
+    background: rgb(49,54,61);
+    background: -moz-linear-gradient(180deg, rgba(49,54,61,0) 0%, rgba(70,74,255,0.051155496378238796) 80%, rgba(70,74,255,0.15) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(49,54,61,0) 0%, rgba(70,74,255,0.051155496378238796) 80%, rgba(70,74,255,0.15) 100%);
+    background: linear-gradient(180deg, rgba(49,54,61,0) 0%, rgba(70,74,255,0.051155496378238796) 80%, rgba(70,74,255,0.15) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#31363d",endColorstr="#464aff",GradientType=1);
+}
+
+.form-text-error{
+    border-bottom: 2px solid #ff2f34;
+    background: #ffffff;
+}
+
+.form-text-error:hover{
+    border-bottom: 2px solid #ff2f34;
+    background: #ffffff;
+}
+
+.form-text-error:focus{
+    border-bottom: 2px solid #ff2f34;
+    background: rgb(49,54,61);
+    background: -moz-linear-gradient(180deg, rgba(49,54,61,0) 0%, rgba(255,47,52,0.051155496378238796) 80%, rgba(255,47,52,0.10157566444546573) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(49,54,61,0) 0%, rgba(255,47,52,0.051155496378238796) 80%, rgba(255,47,52,0.10157566444546573) 100%);
+    background: linear-gradient(180deg, rgba(49,54,61,0) 0%, rgba(255,47,52,0.051155496378238796) 80%, rgba(255,47,52,0.10157566444546573) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#31363d",endColorstr="#ff2f34",GradientType=1);
+}
+
+.form-text-border{
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+    outline: none;
+    background:  transparent;
+    -webkit-transition: border-bottom-color 0.4s, border-left-color 0.4s, border-top-color 0.4s, border-right-color 0.4s;
+    -moz-transition: border-bottom-color 0.4s, border-left-color 0.4s, border-top-color 0.4s, border-right-color 0.4s;
+    -ms-transition: border-bottom-color 0.4s, border-left-color 0.4s, border-top-color 0.4s, border-right-color 0.4s;
+    -o-transition: border-bottom-color 0.4s, border-left-color 0.4s, border-top-color 0.4s, border-right-color 0.4s;
+    transition: border-bottom-color 0.4s, border-left-color 0.4s, border-top-color 0.4s, border-right-color 0.4s;
+}
+
+.form-text-border:hover{
+    border: 1px solid #6c87ff;
+}
+
+.form-text-border:focus{
+    border: 1px solid #464aff;
+}
+
+/*//////////////////////////////////////////////////FORM GROUP////////////////////////////////////////////////////////*/
+
+.form-group{
+    display: grid;
+    grid-template-columns: max-content;
+    grid-gap: 0;
+    grid-template-rows: max-content max-content;
+    position: relative;
+}
+
+.form-group > .form-label{
+    justify-self: stretch;
+    align-self: center;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 1;
+
+}
+
+.form-group > .form-text {
+    justify-self: stretch;
+    align-self: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    z-index: 2;
+}
+
+.form-group > .form-text-border {
+    justify-self: stretch;
+    align-self: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    z-index: 2;
+}
+
+.form-group-row{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 0;
+    grid-template-rows: max-content max-content;
+    position: relative;
+}
+
+.form-group-row > .form-text {
+    justify-self: stretch;
+    align-self: center;
+    grid-row: 1/2;
+    z-index: 2;
+}
+
+.form-group-row > .form-label-left{
+    justify-self: center;
+    align-self: center;
+    padding-right: 0.5rem;
+    font-size: 1.1rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 1;
+
+}
+
+.form-group-row > .form-label-right{
+    justify-self: center;
+    align-self: center;
+    padding-left: 0.5rem;
+    font-size: 1.1rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    z-index: 1;
+}
+
+.form-group-row > .form-label-border-left{
+    justify-self: stretch;
+    align-self: stretch;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    font-size: 1rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 1;
+    border: 1px solid gray;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.form-group-row > .form-label-border-right{
+    justify-self: stretch;
+    align-self: stretch;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    font-size: 1rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    z-index: 1;
+    border: 1px solid gray;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.form-group-row> .form-text-border{
+    justify-self: stretch;
+    align-self: stretch;
+    grid-row: 1/2;
+    z-index: 2;
+}
+
+.form-group-row> .form-text-border.round-left{
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.form-group-row> .form-text-border.round-right{
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+
+/*/////////////////////////////////////////////!*ADVANCE*!/////////////////////////////////////////////////////////*/
+.form-group-animated {
+    padding: 0;
+    margin:0;
+    position: relative;
+    z-index: 1;
+    height: 3rem;
+}
+
+.form-group-animated > input {
+    font-size: 1rem;
+    -webkit-appearance: none;
+    position: relative;
+    margin:0;
+    z-index: 1;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid gray;
+    outline: none;
+    background:  transparent;
+    -webkit-transition: background-color 0.4s, border-bottom-color 0.4s;
+    -moz-transition: background-color 0.4s, border-bottom-color 0.4s;
+    -ms-transition: background-color 0.4s, border-bottom-color 0.4s;
+    -o-transition: background-color 0.4s, border-bottom-color 0.4s;
+    transition: background-color 0.4s, border-bottom-color 0.4s;
+}
+
+.form-group-animated > input:focus {
+    border-bottom: 2px solid #464aff;
+    background: rgb(49,54,61);
+    background: -moz-linear-gradient(180deg, rgba(49,54,61,0) 0%, rgba(70,74,255,0.051155496378238796) 80%, rgba(70,74,255,0.15) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(49,54,61,0) 0%, rgba(70,74,255,0.051155496378238796) 80%, rgba(70,74,255,0.15) 100%);
+    background: linear-gradient(180deg, rgba(49,54,61,0) 0%, rgba(70,74,255,0.051155496378238796) 80%, rgba(70,74,255,0.15) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#31363d",endColorstr="#464aff",GradientType=1);
+}
+
+.form-group-animated > label {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: .3s bottom, .4s opacity;
+    -moz-transition: .3s bottom, .4s opacity;
+    -ms-transition: .3s bottom, .4s opacity;
+    -o-transition: .3s bottom, .4s opacity;
+    transition: .3s bottom, .4s opacity;
+    bottom: 1rem;
+    left: 0.5rem;
+    z-index: 0;
+    font-size: 1rem;
+    color: #1e1e1e;
+}
+
+.form-group-animated > input:focus      +  label,
+.form-group-animated > input:invalid    +  label {
+    bottom: 100%;
+    font-size: 1rem;
+    z-index: 2;
+    opacity: 1;
+}
+
+.form-group-animated > input:invalid {
+    border-left: 10px solid #f00;
+}
+
+.form-group-animated > input:invalid + label::after {
+    color: #f00;
+    content: "X";
+    font-size: 1rem;
+    line-height: 1rem;
+    padding-left: 0.5rem;
+}
+
+
+.form-basic-group-animated {
+    padding: 0;
+    margin:0;
+    position: relative;
+    z-index: 1;
+    height: 3rem;
+}
+
+.form-basic-group-animated > input {
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+    border: 1px solid gray;
+    outline: none;
+    background:  transparent;
+    -webkit-transition: border-bottom-color 0.4s, border-left-color 0.4s, border-top-color 0.4s, border-right-color 0.4s;
+    -moz-transition: border-bottom-color 0.4s, border-left-color 0.4s, border-top-color 0.4s, border-right-color 0.4s;
+    -ms-transition: border-bottom-color 0.4s, border-left-color 0.4s, border-top-color 0.4s, border-right-color 0.4s;
+    -o-transition: border-bottom-color 0.4s, border-left-color 0.4s, border-top-color 0.4s, border-right-color 0.4s;
+    transition: border-bottom-color 0.4s, border-left-color 0.4s, border-top-color 0.4s, border-right-color 0.4s;
+    -webkit-appearance: none;
+    position: relative;
+    margin:0;
+    z-index: 2;
+}
+
+.form-basic-group-animated > input:focus {
+    border: 1px solid #464aff;
+}
+
+.form-basic-group-animated > label {
+    position: absolute;
+    bottom: 50%;
+    left: 0.5rem;
+    z-index: 1;
+    font-size: 1rem;
+    color: #1e1e1e;
+    opacity: 0;
+    -webkit-transition: bottom 0.4s, opacity 0.4s;
+    -moz-transition: bottom 0.4s, opacity 0.4s;
+    -ms-transition: bottom 0.4s, opacity 0.4s;
+    -o-transition: bottom 0.4s, opacity 0.4s;
+    transition: bottom 0.4s, opacity 0.4s;
+    -webkit-appearance: none;
+}
+
+.form-basic-group-animated > input:focus      +  label,
+.form-basic-group-animated > input:invalid    +  label {
+    bottom: 100%;
+    opacity: 1;
+}
+
+.form-basic-group-animated > input:invalid {
+    border-left: 10px solid #f00;
+}
+
+.form-basic-group-animated > input:invalid + label::after {
+    color: #f00;
+    content: "X";
+    font-size: 1rem;
+    line-height: 1rem;
+    padding-left: 0.5rem;
+}

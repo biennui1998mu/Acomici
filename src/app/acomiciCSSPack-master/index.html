@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Acomici Library</title>
+    <link rel="stylesheet" href="./css/root.css">
+    <link href="https://unpkg.com/ionicons@4.4.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <style>
+        html , body {
+            padding: 0;
+            margin: 0;
+            width: 100vw;
+        }
+
+        body{
+            overflow: auto;
+        }
+    .section{
+        display: grid;
+        grid-template-areas: 
+        'title'
+        'demonstrate';
+        grid-gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content auto;
+        background: white;
+        padding: 1em;
+        width: 100vw;
+    }
+
+    .section:nth-child(even){
+        background: rgb(76, 76, 76);
+        color: #ffffff;
+    }
+
+    .section > h2{
+        grid-area: title;
+        padding: 0;
+        margin: 0;
+    }
+
+    .demonstrate{
+        grid-area: demonstrate;
+        display: inline-block;
+        width: 100vw;
+        padding: 0 1em;
+    }
+
+    /*.special{*/
+        /*grid-template-columns: repeat(5,1fr);*/
+    /*}*/
+
+    .demonstrate > .unit {
+        margin: 1em;
+        display: inline-block;
+        width: max-content;
+        min-height: 180px;
+        border: 1px solid black;
+        border-radius: 0.5em;
+        padding: 0.5em;
+        min-width: 300px;
+    }
+
+    .demonstrate > .unit > h4{
+        color: crimson;
+    }
+
+    .section:nth-child(even) > .demonstrate > .unit > h4{
+        color: #ffe154;
+    }
+    </style>
+    <script src="js/button.js"></script>
+
+
+</head>
+<body>
+
+    <!-- Button section -->
+    <div class="section">
+        <h2>Buttons</h2>
+        <div class="demonstrate">
+            <div class="unit">
+                <h4>button <br> (btn)</h4>
+                <button class="btn">
+                    setting
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button green <br> (btn-green)</h4>
+                <button class="btn btn-green">
+                    setting
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button red <br> (btn-red)</h4>
+                <button class="btn btn-red">
+                    setting
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button orange <br> (btn-orange)</h4>
+                <button class="btn btn-orange">
+                    setting
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button silver <br> (btn-silver)</h4>
+                <button class="btn btn-silver">
+                    setting
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button dark <br> (btn-dark)</h4>
+                <button class="btn btn-dark">
+                    setting
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button blue <br> (btn-blue)</h4>
+                <button class="btn btn-blue">
+                    setting
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button outline (default) <br> (btn-outline)</h4>
+                <button class="btn btn-outline">
+                    setting
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button green outline <br> (btn-green-outline)</h4>
+                <button class="btn btn-green-outline">
+                    setting
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button red outline <br> (btn-red-outline)</h4>
+                <button class="btn btn-red-outline">
+                    setting
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button orange outline <br> (btn-orange-outline)</h4>
+                <button class="btn btn-orange-outline">
+                    setting
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button silver outline <br> (btn-silver-outline)</h4>
+                <button class="btn btn-silver-outline">
+                    setting
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button dark outline <br> (btn-dark-outline)</h4>
+                <button class="btn btn-dark-outline">
+                    setting
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button blue outline <br> (btn-blue-outline)</h4>
+                <button class="btn btn-blue-outline">
+                    setting
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!--Special button-->
+
+    <div class="section">
+        <h2>Special Buttons</h2>
+        <div class="demonstrate special">
+            <div class="unit">
+                <h4>button animated icon bottom<br>(btn-icon-bottom-animated )</h4>
+                <!--data-text="Setting"-->
+                <button class="btn btn-icon-bottom-animated" >
+                    <span class="text">Setting</span>
+                    <i class="icon ion-md-settings"></i>
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button animated icon side<br>(btn-icon-side)</h4>
+                <!--data-text="Setting"-->
+                <button class="btn btn-icon-side" >
+                    <span class="text">Setting</span>
+                    <i class="icon ion-md-settings"></i>
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button static right icon <br> (btn-icon-static-right)</h4>
+                <!--data-text="Setting"-->
+                <button class="btn btn-icon-static-right" >
+                    <span class="text">Setting</span>
+                    <i class="icon ion-md-settings"></i>
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button static left icon <br> (btn-icon-static-left)</h4>
+                <!--data-text="Setting"-->
+                <button class="btn btn-icon-static-left" >
+                    <span class="text">Setting</span>
+                    <i class="icon ion-md-settings"></i>
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button static left animated icon <br> (btn-icon-static-left-animated)</h4>
+                <!--data-text="Setting"-->
+                <button class="btn btn-icon-static-left-animated" >
+                    <span class="text">Setting</span>
+                    <i class="icon ion-md-settings"></i>
+                </button>
+            </div>
+            <div class="unit">
+                <h4>button static right animated icon <br> (btn-icon-static-right-animated)</h4>
+                <!--data-text="Setting"-->
+                <button class="btn btn-icon-static-right-animated" >
+                    <span class="text">Setting</span>
+                    <i class="icon ion-md-settings"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!--Input form text-->
+
+    <div class="section">
+        <h2>Form - Input text</h2>
+        <div class="demonstrate special">
+            <div class="unit">
+                <h4>Basic form <br><small>(.form-text)</small><br><small>Standalone tag</small></h4>
+                <input type="text" class="form-text" title="test" placeholder="this is place holder">
+            </div>
+            <div class="unit">
+                <h4>Form with all border<br><small>(.form-text-border)</small><br><small>Standalone tag</small></h4>
+                <input type="text" class="form-text-border" title="test" placeholder="this is place holder">
+            </div>
+            <div class="unit">
+                <h4>Form has error<br><small>(.form-text-error)</small><br><small>Standalone tag</small></h4>
+                <input type="text" class="form-text form-text-error" title="test" placeholder="this is place holder">
+            </div>
+            <div class="unit">
+                <h4>Form basic has animated label<br> <small>(.form-basic-group-animated > input + label)</small> <br><small>Must place label behind input tag</small></h4>
+                <div class="form-basic-group-animated ">
+                    <input type="text" id="test0" title="test" placeholder="this is place holder">
+                    <label for="test0">this is label</label>
+                </div>
+            </div>
+            <div class="unit">
+                <h4>Form has animated label<br> <small>(.form-group-animated > input + label)</small> <br><small>Must place label behind input tag</small></h4>
+                <div class="form-group-animated ">
+                    <input type="text" id="test" title="test" placeholder="this is place holder">
+                    <label for="test">this is label</label>
+                </div>
+            </div>
+            <div class="unit">
+                <h4>Form has label left<br><small>(.form-group-row > .form-label-left + .form-text/border)</small><br><small>Any order</small></h4>
+                <div class="form-group-row">
+                    <label class="form-label-left" for="test1">this is label</label>
+                    <input type="text" id="test1" class="form-text" title="test" placeholder="this is place holder">
+                </div>
+            </div>
+            <div class="unit">
+                <h4>Form has label right<br><small>(.form-group-row > .form-label-right + .form-text/border-text)</small><br><small>Any order</small></h4>
+                <div class="form-group-row">
+                    <label class="form-label-right" for="test2">this is label</label>
+                    <input type="text" id="test2" class="form-text-border" title="test" placeholder="this is place holder">
+                </div>
+            </div>
+            <div class="unit">
+                <h4>Form has label left<br><small>(.form-group-row > .form-label-right + .form-text/border)</small><br><small>Any order</small></h4>
+                <div class="form-group-row">
+                    <label class="form-label-left" for="test6">this is label</label>
+                    <input type="text" id="test6" class="form-text-border" title="test" placeholder="this is place holder">
+                </div>
+            </div>
+            <div class="unit">
+                <h4>Form has label-border right <br><small>(.form-group-row > <br> .form-label-border-right + .form-text-border.border-left)</small></h4>
+                <div class="form-group-row">
+                    <label class="form-label-border-right" for="test3">this is label</label>
+                    <input type="text" id="test3" class="form-text-border round-left" title="test" placeholder="this is place holder">
+                </div>
+            </div>
+            <div class="unit">
+                <h4>Form has label-border left <br><small>(.form-group-row > .<br> .form-label-border-left + .form-text-border.border-right )</small></h4>
+                <div class="form-group-row">
+                    <input type="text" id="test4" class="form-text-border round-right" title="test" placeholder="this is place holder">
+                    <label class="form-label-border-left" for="test4">this is label</label>
+                </div>
+            </div>
+            <div class="unit">
+                <h4>Form has label default<br><small>(.form-group > .form-label-left + .form-text)</small><br><small>Any order</small></h4>
+                <div class="form-group">
+                    <label class="" for="test5">this is label</label>
+                    <input type="text" id="test5" class="form-text" title="test" placeholder="this is place holder">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Input form radio-->
+
+    <div class="section">
+        <h2>Form - Input radio <br>
+        (label > input[radio] + span.radio)</h2>
+        <div class="demonstrate">
+            <div class="unit">
+                <h4>Form basic <br> (form-radio > input[radio] + .radio)</h4>
+                <label class="form-radio"> this is me
+                    <input type="radio" checked name="radio"/>
+                    <span class="radio"></span>
+                </label>
+                <label class="form-radio"> this isn't me
+                    <input type="radio" name="radio"/>
+                    <span class="radio"></span>
+                </label>
+            </div>
+            <div class="unit">
+                <h4>Form radio basic row <br> (form-radio-row > input[radio] + span.radio) <br> <small>only when width is enough</small></h4>
+                <label class="form-radio-row"> this is me
+                    <input type="radio" checked name="radio1"/>
+                    <span class="radio"></span>
+                </label>
+                <label class="form-radio-row"> this isn't me
+                    <input type="radio" name="radio1"/>
+                    <span class="radio"></span>
+                </label>
+            </div>
+            <div class="unit">
+                <h4>Form basic checkbox <br> (form-checkbox > input[checkbox] + .checkbox)</h4>
+                <label class="form-checkbox"> this is me
+                    <input type="checkbox" checked name="radio1"/>
+                    <span class="checkbox"></span>
+                </label>
+                <label class="form-checkbox"> this is me
+                    <input type="checkbox" checked name="radio1"/>
+                    <span class="checkbox"></span>
+                </label>
+            </div>
+            <div class="unit">
+                <h4>Form checkbox switch style <br> (form-checkbox-switch > input[checkbox] + .checkbox)</h4>
+                <label class="form-checkbox-switch"> this is me
+                    <input type="checkbox" checked name="radio1"/>
+                    <span class="checkbox"></span>
+                </label>
+                <label class="form-checkbox-switch"> this is me
+                    <input type="checkbox" checked name="radio1"/>
+                    <span class="checkbox"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!--Selector-->
+
+    <div class="section">
+        <h2>Select - Option</h2>
+        <div class="demonstrate">
+            <div class="unit">
+                <h4>Select basic <br> (form-select > label + select)</h4>
+                <!--<div class="form-select">-->
+                    <!--<label for="select">select section</label>-->
+                    <!--<select name="test" id="select">-->
+                        <!--<option value="1">value 1</option>-->
+                        <!--<option value="2">value 2</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+                <select name="bes" id="testss">
+                    <option value="1">value 1</option>
+                    <option value="2">value 2</option>
+                    <option value="3">value 3</option>
+                </select>
+            </div>
+            <div class="unit">
+                <h4>Select basic custom <br> (form-select > label + select)</h4>
+                <acom-select>
+                    <acom-select-label for="customTag1">
+                        select section
+                    </acom-select-label>
+                    <acom-select-option name="testcustom" id="customTag1">
+                        <acom-select-option-item>
+                            Value 1
+                        </acom-select-option-item>
+                        <acom-select-option-item>
+                            Value 2
+                        </acom-select-option-item>
+                        <acom-select-option-item>
+                            Value 3
+                        </acom-select-option-item>
+                    </acom-select-option>
+                </acom-select>
+            </div>
+        </div>
+    </div>
+    <script src="./js/root.js"></script>
+    <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+</body>
+</html>

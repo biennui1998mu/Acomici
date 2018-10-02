@@ -1,0 +1,348 @@
+.form-radio{
+    display: block;
+    position: relative;
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: max-content;
+}
+
+.form-radio input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(50%, -50%);
+    -moz-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+}
+
+/* Create a custom radio button */
+.radio {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(50%, 0);
+    -moz-transform: translate(50%, 0);
+    -ms-transform: translate(50%, 0);
+    -o-transform: translate(50%, 0);
+    transform: translate(50%, 0);
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: gray;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+/* On mouse-over, add a grey background color */
+.form-radio:hover input[type=radio] ~ .radio {
+    background-color: #6c87ff;
+}
+
+/* When the radio button is checked, add a blue background */
+.form-radio input[type=radio]:checked ~ .radio {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.form-radio input[type=radio]:checked ~ .radio:after {
+    opacity: 1;
+}
+
+/* Style the indicator (dot/circle) */
+.form-radio .radio:after {
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(55%, -50%);
+    -moz-transform: translate(55%, -50%);
+    -ms-transform: translate(55%, -50%);
+    -o-transform: translate(55%, -50%);
+    transform: translate(55%, -50%);
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: white;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.form-radio-row{
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: max-content;
+}
+
+.form-radio-row input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(50%, -50%);
+    -moz-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+}
+
+/* Create a custom radio button */
+.radio {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(50%, -50%);
+    -moz-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: gray;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+/* On mouse-over, add a grey background color */
+.form-radio-row:hover input[type=radio] ~ .radio {
+    background-color: #6c87ff;
+}
+
+/* When the radio button is checked, add a blue background */
+.form-radio-row input[type=radio]:checked ~ .radio {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.form-radio-row input[type=radio]:checked ~ .radio:after {
+    opacity: 1;
+}
+
+/* Style the indicator (dot/circle) */
+.form-radio-row .radio:after {
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(55%, -50%);
+    -moz-transform: translate(55%, -50%);
+    -ms-transform: translate(55%, -50%);
+    -o-transform: translate(55%, -50%);
+    transform: translate(55%, -50%);
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: white;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.form-checkbox{
+    display: block;
+    position: relative;
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: max-content;
+}
+
+.form-checkbox input[type=checkbox]{
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(50%, -50%);
+    -moz-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+}
+
+/* Create a custom checkbox */
+.checkbox {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(50%, -50%);
+    -moz-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #eee;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+    border-radius: 0.3rem;
+}
+
+/* On mouse-over, add a grey background color */
+.form-checkbox:hover input ~ .checkbox {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.form-checkbox input:checked ~ .checkbox {
+    background-color: #2196F3;
+}
+
+/* Create the checkbox/indicator (hidden when not checked) */
+.checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.form-checkbox input:checked ~ .checkbox:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.form-checkbox .checkbox:after {
+    left: 0;
+    top: 50%;
+    -webkit-transform: translate(50%, -50%);
+    -moz-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.form-checkbox-switch{
+    display: block;
+    position: relative;
+    padding: 0.5rem 0.5rem 0.5rem 5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: max-content;
+}
+
+.form-checkbox-switch input[type=checkbox]{
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(50%, -50%);
+    -moz-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+}
+
+/* Create a custom checkbox */
+.form-checkbox-switch > .checkbox {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(50%, -50%);
+    -moz-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    height: 1.5rem;
+    width: 3rem;
+    background-color: #ff2f34;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+    border-radius: 0.3rem;
+}
+
+/* When the checkbox is checked, add a blue background */
+.form-checkbox-switch input:checked ~ .checkbox {
+    background-color: #2196F3;
+}
+
+/* Create the checkbox/indicator (hidden when not checked) */
+.form-checkbox-switch > .checkbox:after {
+    content: "";
+    position: absolute;
+    display: block;
+}
+
+/* Show the checkbox when checked */
+.form-checkbox-switch input:checked ~ .checkbox:after {
+    left: 50%;
+}
+
+/* Style the checkbox/indicator */
+.form-checkbox-switch .checkbox:after {
+    left: 0;
+    top: 50%;
+    -webkit-transform: translate(50%, -50%);
+    -moz-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-transition: left 0.5s;
+    -moz-transition: left 0.5s;
+    -ms-transition: left 0.5s;
+    -o-transition: left 0.5s;
+    transition: left 0.5s;
+}
