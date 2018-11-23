@@ -30,26 +30,35 @@
         <p>Đến Tiền Mùa Giải rồi đây! Bản cập nhật này ít những thay đổi khiến cho meta xoay chuyển cũng như lối chơi hơn các Tiền Mùa Giải trước kia. Mục tiêu của chúng tôi là cải thiện trải nghiệm của bạn, giúp bạn có được những khoảng thời gian đáng nhớ với Liên Minh. Chúng tôi có bốn thứ tại mùa này: giai đoạn đi đường được cải thiện và kéo dài hơn một chút; lật kèo sẽ cho bạn cảm giác thỏa mãn và đáng hơn; trận đấu sẽ kết thúc sớm hơn; và ngọc sẽ không ảnh hưởng gì tới chỉ số nữa. Đến Tiền Mùa Giải rồi đây! Bản cập nhật này ít những thay đổi khiến cho meta xoay chuyển cũng như lối chơi hơn các Tiền Mùa Giải trước kia. Mục tiêu của chúng tôi là cải thiện trải nghiệm của bạn, giúp bạn có được những khoảng thời gian đáng nhớ với Liên Minh. Chúng tôi có bốn thứ tại mùa này: giai đoạn đi đường được cải thiện và kéo dài hơn một chút; lật kèo sẽ cho bạn cảm giác thỏa mãn và đáng hơn; trận đấu sẽ kết thúc sớm hơn; và ngọc sẽ không ảnh hưởng gì tới chỉ số nữa.</p>
       </div>
       <div class="khung_comment_user">
-        <div class="khung_their" *ngFor="let eachcmt of comments">
+        <div class="khung_their" *ngIf="onecmt && !morecmt">
           <img class="khung_their_avatar" src="" alt="">
           <div class="khung_their_comment">
-            <p>{{eachcmt.comment}}</p>
-            <div class="khung_tuongtac_their_comment">
-              <button class="btn_like">999</button>
-              <button class="btn_dislike">999</button>    
-            </div>
+            <p>asdasdasdasdadasdasdaasadasd</p>
           </div>
-        </div>  
-        <div class="khung_your_comment">
+          <button class="khung_btn_xemthem" (click)="clickmore()">Xem Thêm</button>
+        </div>
+        <div *ngIf="!onecmt && morecmt">
+          <div class="khung_their" *ngFor="let eachcmt of more_comment">
+            <img class="khung_their_avatar" src="" alt="">
+            <div class="khung_their_comment" style="width: 100% !important">
+              <p>{{eachcmt.comment}}</p>
+            </div>
+          </div> 
+        </div> 
+        <button class="btn_comment" *ngIf="!comment && noncmt" (click)="onclick()">Bình Luận</button>
+        <div class="khung_your_comment" *ngIf="comment && !noncmt">
           <img class="your_avatar" src="" alt="">
           <div class="your_comment" contenteditable="true"></div>
           <div class="khung_file_photo">
             <button><i class="material-icons">add_photo_alternate</i></button>
-            <button><i class="material-icons">folder_open</i></button>
+            <div class="khung_btn_upload">
+              <button><i class="material-icons">add_photo_alternate</i></button>
+              <input type="file">
+            </div>
           </div>
-          <!-- <textarea class="your_comment" name="" id="" cols="72" rows="3"></textarea> -->
         </div>
       </div>
     </div>
   </div>
 </div>
+
