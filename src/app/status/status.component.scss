@@ -6,249 +6,271 @@ $primary-color-text-light: #ffffff;
 $secondary-color-text: #757575;
 $accent-color: #ff5722;
 $divider-color: #bdbdbd;
-$shadow: rgba(34,36,38,.15);
+$shadow: rgba(34, 36, 38, .15);
 
-.khung_status{
+.khung_status {
+  display: grid;
+  position: relative;
+  width: 50%;
+  height: max-content;
+  border: 0.5px solid whitesmoke;
+  border-radius: 5px;
+  // box-shadow: 3px 2px $shadow;
+
+  .khung_background_user {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    height: 5rem;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+    .background_user {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      border-radius: 5px;
+      filter: blur(2px);
+      transition: all 3s ease-in-out;
+
+      &:hover {
+        top: -300px;
+        filter: blur(0px);
+      }
+    }
+  }
+
+  .avatar_user {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    width: 4rem;
+    height: 4rem;
+    background: red;
+    z-index: 1;
+    border-radius: 50%;
+  }
+
+  .khung_name_user {
+    position: absolute;
+    top: 0;
+    margin-top: 3rem;
+    margin-left: 6rem;
+    width: 80%;
+    height: 5rem;
+
+    .name_user {
+      font-size: 1.2rem;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  .khung_content {
     display: grid;
-    position: relative;
-    width: 50%;
-    height: max-content;
-    border: 0.5px solid whitesmoke;
-    border-radius: 5px;
-    // box-shadow: 3px 2px $shadow;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 1fr;
 
-    .khung_background_user{
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        height: 5rem;
-        width: 100%;
-        border-top-right-radius: 5px;
-        border-top-left-radius: 5px;
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    height: auto;
+    background: whitesmoke;
 
-        .background_user{
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: auto;
-            cursor: pointer;
-            border-radius: 5px;
-            filter: blur(2px);
-            transition: all 3s ease-in-out;
+    .khung_tuongtac_chua_button {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-top: 1.5rem;
 
-            &:hover{
-                top: -300px;
-                filter: blur(0px);
-            }
-        }
-    }
-    .avatar_user{
-        position: absolute;
-        top: 2rem;
-        left: 1rem;
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 4rem;
-        height: 4rem;
-        background: red;
-        z-index: 1;
-        border-radius: 50%;
-    }
-    .khung_name_user{
-        position: absolute;
-        top: 0;
-        margin-top: 3rem;
-        margin-left: 6rem;
-        width: 80%;
-        height: 5rem;
+        height: 2rem;
+        background: white;
+        border: 0.5px solid rgb(189, 189, 189);
+        border-radius: 20px;
+        outline: none;
+        cursor: pointer;
+        transition: all .4s;
+        margin: .5rem auto;
 
-        .name_user{
-            font-size: 1.2rem;
-            color: white;
-            font-weight: bold;
-            font-size: 1.5rem;
-            cursor: pointer;
+        >* {
+          margin: auto 0.25rem
         }
-    }
-    .khung_content{
-        display: grid;
-        grid-template-columns: 10% 90%;
-        grid-template-rows: 1fr;
 
-        position: absolute;
-        top: 5rem;
+        i {
+          font-size: 1.2rem;
+        }
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+
+    .khung_status_comment {
+      position: relative;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      padding-left: 1rem;
+      // padding-top: 0.5rem;
+      padding-right: 0.8rem;
+
+      .khung_status_user {
+        width: 100%;
+        height: max-content;
+
+        p {
+          text-align: justify;
+          font-size: 1.05rem;
+        }
+      }
+
+      .khung_comment_user {
         width: 100%;
         height: auto;
-        background: whitesmoke;
 
-        .khung_tuongtac{
+        .khung_their {
+          display: grid;
+          grid-template-columns: 2rem auto;
+          grid-template-rows: 1fr;
+          grid-column-gap: 1rem;
+          width: 95%;
+          height: auto;
+          margin-bottom: 1.5rem;
+          border: 0.5px solid black;
+          padding: 0.5rem;
+
+
+          .khung_their_avatar {
             grid-column: 1/2;
             grid-row: 1/2;
+            width: 2rem;
+            height: 2rem;
+            background: white;
+            border: 0.5px solid $primary-color-background-dark;
+            border-radius: 50%;
+          }
 
-            .khung_tuongtac_chua_button{
-                margin-top: 1.5rem;
-
-                button{
-                    display: flex;
-                    width: 4rem;
-                    height: 2rem;
-                    margin-top: 0.5rem;
-                    margin-bottom: 0.5rem;
-                    margin-left: 0.5rem;
-                    background: white;
-                    border: 0.5px solid white;
-                    border-radius: 20px;
-                    outline: none;
-                    cursor: pointer;
-
-                    i{
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-        }
-        .khung_status_comment{
-            position: relative;
+          .khung_their_comment {
+            margin: 0;
             grid-column: 2/3;
             grid-row: 1/2;
-            padding-left: 1rem;
-            // padding-top: 0.5rem;
-            padding-right: 0.8rem;
+            position: relative;
+            width: 100%;
+            height: auto;
+            background: $primary-color-background-light;
+            border: 0.5px solid $primary-color-background-dark;
+            border-radius: 8px;
+            padding: 0.5rem;
 
-            .khung_status_user{
-                width: 100%;
-                height: max-content;
-
-                p{
-                    text-align: justify;
-                    font-size: 1.05rem;
-                }
+            p {
+              margin: 0;
+              width: 100%;
+              text-overflow: clip;
+              white-space: pre-wrap;
+              overflow: hidden;
             }
-            .khung_comment_user{
-                width: 100%;
-                height: auto;
 
-                .khung_their{
-                    display: grid;
-                    grid-template-columns: 2rem auto;
-                    grid-template-rows: 1fr;
-                    grid-column-gap: 1rem;
-                    width: 95%;
-                    height: auto;
-                    margin-bottom: 1.5rem;
+            .khung_tuongtac_their_comment {
+              position: absolute;
+              right: 0;
+              bottom: -0.5rem;
+              margin-right: 1.4rem;
+              width: 6rem;
+              height: 1rem;
+              padding: 0;
 
+              button {
+                width: 2.5rem;
+                height: 1.5rem;
+                padding: 0;
+                background: whitesmoke;
+                text-overflow: ellipsis;
+                outline: none;
+                cursor: pointer;
+                margin-right: 0.5rem;
+                border-radius: 10px;
+                box-shadow: 2px 1px $shadow;
+              }
 
-                    .khung_their_avatar{
-                        grid-column: 1/2;
-                        grid-row: 1/2;
-                        width: 2rem;
-                        height: 2rem;
-                        background: white;
-                        border: 0.5px solid $primary-color-background-dark;
-                        border-radius: 50%;
-                    }
-                    .khung_their_comment{
-                        grid-column: 2/3;
-                        grid-row: 1/2;
-                        position: relative;
-                        width: 100%;
-                        height: auto;
-                        background: $primary-color-background-light;
-                        border: 0.5px solid $primary-color-background-dark;
-                        border-radius: 15px;
+              .btn_like {
+                color: white;
+                background: $primary-color-background-dark;
+                border: 0.5px solid $primary-color-background-dark;
+              }
 
-                        p{  
-                            text-align: justify;
-                            margin: 0.1rem 0 0.5rem 0.5rem;
-                            width: 35rem;
-                            white-space: pre-line;
-                        }
-                        .khung_tuongtac_their_comment{
-                            position: absolute;
-                            right: 0;
-                            bottom: -0.5rem;
-                            margin-right: 1.4rem;
-                            width: 6rem;
-                            height: 1rem;
-                            padding: 0;
-
-                            button{
-                                width: 2.5rem;
-                                height: 1.5rem;
-                                padding: 0;
-                                background: whitesmoke;
-                                text-overflow: ellipsis;
-                                outline: none;
-                                cursor: pointer;
-                                margin-right: 0.5rem;
-                                border-radius: 10px;
-                                box-shadow: 2px 1px $shadow;
-                            }
-                            .btn_like{
-                                color: white;
-                                background: $primary-color-background-dark;
-                                border: 0.5px solid $primary-color-background-dark;
-                            }
-                            .btn_dislike{
-                                color: white;
-                                background: red;
-                                border: 0.5px solid red;
-                            }
-                        }
-                    }
-                }
-
-                .khung_your_comment{
-                    position: relative;
-                    border: 0.5px solid $primary-color-background-dark;
-                    border-radius: 5px;
-                    width: 100%;
-                    height: 5.5rem;
-                    margin: 0.5rem 0 1rem 0;
-                    background: $primary-color-background-light;
-
-                    .your_avatar{
-                        position: absolute;
-                        border: 0.5px solid $primary-color-background-dark;
-                        border-radius: 50%;
-                        width: 3rem;
-                        height: 3rem;
-                        margin: 0.5rem;
-                        background: white;
-                    }
-                    .your_comment{
-                        position: absolute;
-                        width: 75%;
-                        height: 4rem;
-                        border: 0.5px solid $primary-color-background-dark;
-                        border-radius: 5px;
-                        outline: none;
-                        right: 0;
-                        margin-top: 0.2rem;
-                        margin-right: 2.5rem;
-                        background: white;
-                        overflow: hidden;
-                        padding: 0.2rem 3rem 0.2rem 0.5rem;
-                    }
-                    .khung_file_photo{
-                        position: absolute;
-                        right: 0;
-                        width: 1.5rem;
-                        height: 3rem;
-                        margin-right: 0.7rem;
-
-                        button{
-                            background: white;
-                            width: 2rem;
-                            height: 2rem;
-                            margin-top: 0.2rem;
-                            padding: 0;
-                            border: 0.5px solid $primary-color-background-dark;
-                            border-radius: 50%;
-                            outline: none;
-                            cursor: pointer;
-                        }
-                    }
-                }
+              .btn_dislike {
+                color: white;
+                background: red;
+                border: 0.5px solid red;
+              }
             }
+          }
         }
+
+        .khung_your_comment {
+          position: relative;
+          border: 0.5px solid $primary-color-background-dark;
+          border-radius: 5px;
+          width: 100%;
+          height: 5.5rem;
+          margin: 0.5rem 0 1rem 0;
+          background: $primary-color-background-light;
+
+          .your_avatar {
+            position: absolute;
+            border: 0.5px solid $primary-color-background-dark;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            margin: 0.5rem;
+            background: white;
+          }
+
+          .your_comment {
+            position: absolute;
+            width: 75%;
+            height: 4rem;
+            border: 0.5px solid $primary-color-background-dark;
+            border-radius: 5px;
+            outline: none;
+            right: 0;
+            margin-top: 0.2rem;
+            margin-right: 2.5rem;
+            background: white;
+            overflow: hidden;
+            padding: 0.2rem 3rem 0.2rem 0.5rem;
+          }
+
+          .khung_file_photo {
+            position: absolute;
+            right: 0;
+            width: 1.5rem;
+            height: 3rem;
+            margin-right: 0.7rem;
+
+            button {
+              background: white;
+              width: 2rem;
+              height: 2rem;
+              margin-top: 0.2rem;
+              padding: 0;
+              border: 0.5px solid $primary-color-background-dark;
+              border-radius: 50%;
+              outline: none;
+              cursor: pointer;
+            }
+          }
+        }
+      }
     }
+  }
 }
