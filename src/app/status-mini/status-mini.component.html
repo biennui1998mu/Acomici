@@ -9,46 +9,57 @@
     <span class="name_user">Đỗ Hoàng "nigga" Nam</span>
   </div>
   <div class="khung_content">
-    <div class="khung_tuongtac">
-      <div class="khung_tuongtac_chua_button">
-        <button>
-          <i class="material-icons" style="color:blue">thumb_up</i>
-          <p>999</p>
-        </button>
-        <button>
-          <i class="material-icons" style="color:red">thumb_down</i>
-          <p>999</p>
-        </button>
-        <button>
-          <i class="material-icons" style="color:green">share</i>
-          <p>999</p>
-        </button>
-      </div>
+    <div class="khung_tuongtac_chua_button">
+      <button>
+        <i class="material-icons" style="color:blue">thumb_up</i>
+        <p>999</p>
+      </button>
+      <button>
+        <i class="material-icons" style="color:red">thumb_down</i>
+        <p>999</p>
+      </button>
+      <button>
+        <i class="material-icons" style="color:green">share</i>
+        <p>999</p>
+      </button>
     </div>
     <div class="khung_status_comment">
       <div class="khung_status_user">
         <p>Đến Tiền Mùa Giải rồi đây! Bản cập nhật này ít những thay đổi khiến cho meta xoay chuyển cũng như lối chơi hơn các Tiền Mùa Giải trước kia. Mục tiêu của chúng tôi là cải thiện trải nghiệm của bạn, giúp bạn có được những khoảng thời gian đáng nhớ với Liên Minh. Chúng tôi có bốn thứ tại mùa này: giai đoạn đi đường được cải thiện và kéo dài hơn một chút; lật kèo sẽ cho bạn cảm giác thỏa mãn và đáng hơn; trận đấu sẽ kết thúc sớm hơn; và ngọc sẽ không ảnh hưởng gì tới chỉ số nữa. Đến Tiền Mùa Giải rồi đây! Bản cập nhật này ít những thay đổi khiến cho meta xoay chuyển cũng như lối chơi hơn các Tiền Mùa Giải trước kia. Mục tiêu của chúng tôi là cải thiện trải nghiệm của bạn, giúp bạn có được những khoảng thời gian đáng nhớ với Liên Minh. Chúng tôi có bốn thứ tại mùa này: giai đoạn đi đường được cải thiện và kéo dài hơn một chút; lật kèo sẽ cho bạn cảm giác thỏa mãn và đáng hơn; trận đấu sẽ kết thúc sớm hơn; và ngọc sẽ không ảnh hưởng gì tới chỉ số nữa.</p>
       </div>
       <div class="khung_comment_user">
-        <div class="khung_their" *ngIf="onecmt && !morecmt">
-          <img class="khung_their_avatar" src="" alt="">
-          <div class="khung_their_comment">
-            <p>asdasdasdasdadasdasdaasadasd</p>
+
+        <div *ngIf="onecmt && !morecmt">
+          <div class="khung_their" style="width: 31rem !important">
+            <img class="khung_their_avatar" src="" alt="">
+            <div class="khung_their_comment">
+              <p>asdasdasdasdadasdasdaasadasd</p>
+            </div>
+            <div class="khung_tuongtac_their_comment">
+              <button class="btn_like">999</button>
+              <button class="btn_dislike">999</button>    
+            </div>
+            <button class="khung_btn_xemthem" (click)="clickmore()">Xem Thêm</button>
           </div>
-          <button class="khung_btn_xemthem" (click)="clickmore()">Xem Thêm</button>
         </div>
+
         <div *ngIf="!onecmt && morecmt">
           <div class="khung_their" *ngFor="let eachcmt of more_comment">
             <img class="khung_their_avatar" src="" alt="">
             <div class="khung_their_comment" style="width: 100% !important">
               <p>{{eachcmt.comment}}</p>
             </div>
+            <div class="khung_tuongtac_their_comment">
+              <button class="btn_like">999</button>
+              <button class="btn_dislike">999</button>    
+            </div>
           </div> 
         </div> 
+
         <button class="btn_comment" *ngIf="!comment && noncmt" (click)="onclick()">Bình Luận</button>
-        <div class="khung_your_comment" *ngIf="comment && !noncmt">
+        <form class="khung_your_comment" *ngIf="comment && !noncmt">
           <img class="your_avatar" src="" alt="">
-          <div class="your_comment" contenteditable="true"></div>
+          <div class="your_comment" contenteditable="true" ></div>
           <div class="khung_file_photo">
             <button><i class="material-icons">add_photo_alternate</i></button>
             <div class="khung_btn_upload">
@@ -56,7 +67,7 @@
               <input type="file">
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>

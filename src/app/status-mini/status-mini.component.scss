@@ -6,69 +6,72 @@ $primary-color-text-light: #ffffff;
 $secondary-color-text: #757575;
 $accent-color: #ff5722;
 $divider-color: #bdbdbd;
-$shadow: rgba(34,36,38,.15);
+$shadow: rgba(34, 36, 38, .15);
 
-.khung_status{
-    display: grid;
-    position: relative;
-    width: 50%;
+.khung_status {
+  display: grid;
+  position: relative;
+  width: 50%;
+  height: max-content;
+  border: 0.5px solid whitesmoke;
+  border-radius: 5px;
+  // box-shadow: 3px 2px $shadow;
+
+  .khung_background_user {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    height: 5rem;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+    .background_user {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      border-radius: 5px;
+      filter: blur(2px);
+      transition: all 3s ease-in-out;
+
+      &:hover {
+        top: -300px;
+        filter: blur(0px);
+      }
+    }
+  }
+
+  .avatar_user {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    width: 4rem;
+    height: 4rem;
+    background: red;
+    z-index: 1;
+    border-radius: 50%;
+  }
+
+  .khung_name_user {
+    position: absolute;
+    top: 0;
+    margin-top: 3rem;
+    margin-left: 6rem;
+    width: max-content;
     height: max-content;
-    border: 0.5px solid whitesmoke;
-    border-radius: 5px;
-    // box-shadow: 3px 2px $shadow;
 
-    .khung_background_user{
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        height: 5rem;
-        width: 100%;
-        border-top-right-radius: 5px;
-        border-top-left-radius: 5px;
-
-        .background_user{
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: auto;
-            cursor: pointer;
-            border-radius: 5px;
-            filter: blur(2px);
-            transition: all 3s ease-in-out;
-
-            &:hover{
-                top: -300px;
-                filter: blur(0px);
-            }
-        }
+    .name_user {
+      font-size: 1.2rem;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
-    .avatar_user{
-        position: absolute;
-        top: 2rem;
-        left: 1rem;
-        width: 4rem;
-        height: 4rem;
-        background: red;
-        z-index: 1;
-        border-radius: 50%;
-    }
-    .khung_name_user{
-        position: absolute;
-        top: 0;
-        margin-top: 3rem;
-        margin-left: 6rem;
-        width: 80%;
-        height: 5rem;
+  }
 
-        .name_user{
-            font-size: 1.2rem;
-            color: white;
-            font-weight: bold;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-    }
-    .khung_content{
+  .khung_content{
         display: grid;
         grid-template-columns: 10% 90%;
         grid-template-rows: 1fr;
@@ -79,53 +82,72 @@ $shadow: rgba(34,36,38,.15);
         height: auto;
         background: whitesmoke;
 
-        .khung_tuongtac{
+        .khung_tuongtac_chua_button {
             grid-column: 1/2;
             grid-row: 1/2;
-
-            .khung_tuongtac_chua_button{
-                margin-top: 1.5rem;
-
-                button{
-                    display: flex;
-                    width: 4rem;
-                    height: 2rem;
-                    margin-top: 0.5rem;
-                    margin-bottom: 0.5rem;
-                    margin-left: 0.5rem;
-                    background: white;
-                    border: 0.5px solid white;
-                    border-radius: 20px;
-                    outline: none;
-                    cursor: pointer;
-
-                    i{
-                        font-size: 1.2rem;
-                    }
+            margin-top: 1.5rem;
+      
+            button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 2rem;
+              height: 2rem;
+              background: white;
+              border: 0.5px solid rgb(189, 189, 189);
+              border-radius: 50%;
+              outline: none;
+              cursor: pointer;
+              transition: all .4s;
+              margin: .5rem auto;
+              font-size: 0;
+              margin: 0.5rem 0 0 1rem;
+      
+              i {
+                font-size: 1.2rem;
+              }
+      
+              &:hover {
+                background: rgba(145, 145, 145, 0.2);
+                width: 4rem;
+                font-size: 0.8rem;
+                border-radius: 1rem;
+                
+                >*{
+                  margin: auto 0.25rem;
                 }
+              }
             }
-        }
-        .khung_status_comment{
+          }
+        .khung_status_comment {
             position: relative;
             grid-column: 2/3;
             grid-row: 1/2;
             padding-left: 1rem;
             // padding-top: 0.5rem;
             padding-right: 0.8rem;
-
-            .khung_status_user{
+        
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+        
+            .khung_status_user {
+                grid-column: 1/2;
+                grid-row: 1/2;
+        
                 width: 100%;
-                height: auto;
-
+                height: max-content;
+        
                 p {
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    max-width: 100%;
+                text-align: justify;
+                font-size: 1.05rem;
                 }
             }
             .khung_comment_user{
-                width: 100%;
+                grid-column: 1/2;
+                grid-row: 2/3;
+
+                width: 40rem;
                 height: auto;
 
                 .khung_their{
@@ -133,14 +155,18 @@ $shadow: rgba(34,36,38,.15);
                     grid-template-columns: 2rem auto;
                     grid-template-rows: 1fr;
                     grid-column-gap: 0.5rem;
-                    width: 95%;
-                    height: auto;
-                    margin-bottom: 1rem;
 
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 1.5rem;
+                    position: relative;
+                    border: 0.5px solid black;
+                    padding: 0.5rem 0.5rem 1rem 0.5rem;
 
                     .khung_their_avatar{
                         grid-column: 1/2;
                         grid-row: 1/2;
+
                         width: 2rem;
                         height: 2rem;
                         background: white;
@@ -150,6 +176,7 @@ $shadow: rgba(34,36,38,.15);
                     .khung_their_comment{
                         grid-column: 2/3;
                         grid-row: 1/2;
+
                         width: 80%;
                         height: auto;
                         background: $primary-color-background-light;
@@ -158,14 +185,61 @@ $shadow: rgba(34,36,38,.15);
 
                         p{  
                             text-align: justify;
-                            margin: 0.2rem 0 0.1rem 0.5rem;
+                            margin: 0.3rem 0 0 0.5rem;
                             width: 35rem;
+                        }
+                    }
+                    .khung_tuongtac_their_comment {
+                        position: absolute;
+                        right: 0;
+                        bottom: -0.5rem;
+                        margin-right: 1.4rem;
+                        width: 6rem;
+                        height: 1rem;
+                        padding: 0;
+            
+                        button {
+                            width: 2.5rem;
+                            height: 1.5rem;
+                            padding: 0;
+                            background: whitesmoke;
+                            text-overflow: ellipsis;
+                            outline: none;
+                            cursor: pointer;
+                            margin-right: 0.5rem;
+                            border-radius: 10px;
+                            box-shadow: 2px 1px $shadow;
+                        }
+            
+                        .btn_like {
+                            color: white;
+                            background: $primary-color-background-dark;
+                            border: 0.5px solid $primary-color-background-dark;
+                            transition: all .5s ease-out;
+                
+                            &:hover{
+                                color: $primary-color-background-dark;
+                                background: white;
+                            }
+                        }
+            
+                        .btn_dislike {
+                            color: white;
+                            background: red;
+                            border: 0.5px solid red;
+                            transition: all .5s ease-out;
+                
+                            &:hover{
+                                color: red;
+                                background: white;
+                            }
                         }
                     }
                     .khung_btn_xemthem{
                         position: absolute;
                         right: 0;
-                        margin: 0.2rem 2rem 0 0;
+                        bottom: 0;
+                        margin: 0 -8rem 1rem 0;
                         width: 6rem;
                         height: 1.5rem;
                         border: 0.5px solid $primary-color-background-dark;
@@ -174,7 +248,7 @@ $shadow: rgba(34,36,38,.15);
                         outline: none;
                         cursor: pointer;
                         transition: all 0.5s ease-in-out;
-
+    
                         &:hover{
                             background: $primary-color-background-dark;
                             color: white;
@@ -184,48 +258,55 @@ $shadow: rgba(34,36,38,.15);
                         }
                     }
                 }
-
-                .khung_your_comment{
-                    position: relative;
+                
+                .khung_your_comment {
+                    display: grid;
+                    grid-template-columns: 4rem auto 4rem;
+                    grid-template-rows: 1fr;
+          
                     border: 0.5px solid $primary-color-background-dark;
                     border-radius: 5px;
-                    width: 100%;
+                    width: 101%;
                     height: 5.5rem;
-                    margin: 0.5rem 0 1rem 0;
+                    margin: 0.5rem 0;
                     background: $primary-color-background-light;
-
-                    .your_avatar{
-                        position: absolute;
-                        border: 0.5px solid $primary-color-background-dark;
-                        border-radius: 50%;
+          
+                    .your_avatar {
+                      grid-column: 1/2;
+                      grid-row: 1/2;
+          
+                      border: 0.5px solid $primary-color-background-dark;
+                      border-radius: 50%;
+                      width: 3rem;
+                      height: 3rem;
+                      margin: 0.5rem;
+                      background: white;
+                    }
+          
+                    .your_comment {
+                      grid-column: 2/3;
+                      grid-row: 1/2;
+          
+                      width: 33rem;
+                      height: 4rem;
+                      border: 0.5px solid $primary-color-background-dark;
+                      border-radius: 5px;
+                      outline: none;
+                      margin-top: 0.2rem;
+                      background: white;
+                      overflow: hidden;
+                      padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+                    }
+          
+                    .khung_file_photo {
+                        grid-column: 3/4;
+                        grid-row: 1/2;
+            
                         width: 3rem;
                         height: 3rem;
-                        margin: 0.5rem;
-                        background: white;
-
-                    }
-                    .your_comment{
-                        position: absolute;
-                        width: 75%;
-                        height: 4rem;
-                        border: 0.5px solid $primary-color-background-dark;
-                        border-radius: 5px;
-                        outline: none;
-                        right: 0;
-                        margin-top: 0.2rem;
-                        margin-right: 2.5rem;
-                        background: white;
-                        overflow: hidden;
-                        padding: 0.2rem 3rem 0.2rem 0.5rem;
-                    }
-                    .khung_file_photo{
-                        position: absolute;
-                        right: 0;
-                        width: 1.5rem;
-                        height: 3rem;
-                        margin-right: 0.7rem;
-
-                        button{
+                        margin-left: 3px;
+            
+                        button {
                             background: white;
                             width: 2rem;
                             height: 2rem;
@@ -235,6 +316,11 @@ $shadow: rgba(34,36,38,.15);
                             border-radius: 50%;
                             outline: none;
                             cursor: pointer;
+                            transition: all 0.5s ease-out;
+            
+                            &:hover{
+                            background: $primary-color-background-dark;
+                            }
                         }
                         .khung_btn_upload {
                             position: relative;

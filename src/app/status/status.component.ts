@@ -20,7 +20,12 @@ export class StatusComponent implements OnInit {
   seelittle:boolean = true;
   seeall:boolean= false;
 
+  show_share:boolean = false;
+  hidden_share:boolean = true;
+
   emoji:boolean = false;
+
+  repcmt:boolean = false;
 
   constructor(
     private _eref: ElementRef
@@ -55,5 +60,19 @@ export class StatusComponent implements OnInit {
 
   clickemoji(){
     this.emoji = true;
+  }
+
+  traloi(){
+    this.repcmt = true;
+  }
+
+  click_showshare(){
+    this.show_share = true;
+    this.hidden_share = false;
+  }
+
+  click_hiddenshare(){
+    this.show_share = false;
+    this.hidden_share = true;
   }
 }

@@ -30,4 +30,10 @@ export class StatusMiniComponent implements OnInit {
     this.onecmt = false;
     this.morecmt = true;
   }
+
+  // keyDownFunction(event) {
+  //   if(event.keyCode == 13) {
+  //     console.log("Enter")
+  //   }
+  // }
 }

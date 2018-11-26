@@ -19,7 +19,7 @@
           <i class="material-icons" style="color:red">thumb_down</i>
           <p>999</p>
         </button>
-        <button>
+        <button (click)="click_showshare()">
           <i class="material-icons" style="color:green">share</i>
           <p>999</p>
         </button>
@@ -30,16 +30,44 @@
         <p>Đến Tiền Mùa Giải rồi đây! Bản cập nhật này ít những thay đổi khiến cho meta xoay chuyển cũng như lối chơi hơn các Tiền Mùa Giải trước kia. Mục tiêu của chúng tôi là cải thiện trải nghiệm của bạn, giúp bạn có được những khoảng thời gian đáng nhớ với Liên Minh. Chúng tôi có bốn thứ tại mùa này: giai đoạn đi đường được cải thiện và kéo dài hơn một chút; lật kèo sẽ cho bạn cảm giác thỏa mãn và đáng hơn; trận đấu sẽ kết thúc sớm hơn; và ngọc sẽ không ảnh hưởng gì tới chỉ số nữa. Đến Tiền Mùa Giải rồi đây! Bản cập nhật này ít những thay đổi khiến cho meta xoay chuyển cũng như lối chơi hơn các Tiền Mùa Giải trước kia. Mục tiêu của chúng tôi là cải thiện trải nghiệm của bạn, giúp bạn có được những khoảng thời gian đáng nhớ với Liên Minh. Chúng tôi có bốn thứ tại mùa này: giai đoạn đi đường được cải thiện và kéo dài hơn một chút; lật kèo sẽ cho bạn cảm giác thỏa mãn và đáng hơn; trận đấu sẽ kết thúc sớm hơn; và ngọc sẽ không ảnh hưởng gì tới chỉ số nữa.</p>
       </div>
       <div class="khung_comment_user">
-        <div class="khung_their" *ngFor="let eachcmt of comments">
-          <img class="khung_their_avatar" src="" alt="">
-          <div class="khung_their_comment">
-            <p>{{eachcmt.comment}}</p>
+        <div *ngFor="let eachcmt of comments">
+          <div class="khung_their">
+            <img class="khung_their_avatar" src="" alt="">
+            <div class="khung_their_comment">
+              <p>{{eachcmt.comment}}</p>
+            </div>
             <div class="khung_tuongtac_their_comment">
+              <button class="btn_rep_cmt" (click)="traloi()">Trả lời</button>
               <button class="btn_like">999</button>
               <button class="btn_dislike">999</button>    
             </div>
           </div>
-        </div>  
+          <div *ngIf="repcmt">
+            <div class="khung_demo_before" *ngFor="let eachcmt of comments">
+              <img class="khung_picture_before_cmt" src="https://www.pidl.org/site-assets/images/line.png/@@images/image.png" alt="">
+              <div class="khung_rep_cmt">
+                <img class="khung_repcmt_avatar" src="" alt="">
+                <div class="khung_repcmt_comment">
+                  <p>{{eachcmt.comment}}</p>
+                </div>
+                <div class="khung_tuongtac_repcmt_comment">
+                  <button class="btn_rep_cmt">Trả lời</button>
+                  <button class="btn_like">999</button>
+                  <button class="btn_dislike">999</button>    
+                </div>
+              </div>
+            </div>
+            <div class="khung_your_repcomment">
+              <img class="repcmt_your_avatar" src="" alt="">
+              <div class="repcmt_your_comment" contenteditable="true"></div>
+              <div class="repcmt_khung_file_photo">
+                <button><i class="material-icons">add_photo_alternate</i></button>
+                <button><i class="material-icons">folder_open</i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="khung_your_comment">
           <img class="your_avatar" src="" alt="">
           <div class="your_comment" contenteditable="true"></div>
@@ -52,4 +80,12 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="khung_share" *ngIf="show_share && !hidden_share">
+  asdasdasdasdasd
+  <button (click)="click_hiddenshare()">
+    <i class="material-icons">arrow_back</i>
+    Back
+  </button>
 </div>
